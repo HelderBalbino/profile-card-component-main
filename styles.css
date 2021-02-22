@@ -1,6 +1,130 @@
+html {
+    font-size: 10px;
+}
+
 body {
-    font-size: 11px;
+    margin: 0 auto;
     text-align: center;
+    background-color: hsl(185, 75%, 39%);
     color: hsl(228, 45%, 44%);
     font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+}
+
+section .background {
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+}
+
+.background div:nth-of-type(1) {
+    position: absolute;
+    top: -300px;
+    left: -350px;
+    z-index: -1;
+}
+
+.background div:nth-of-type(2) {
+    position: absolute;
+    bottom: -550px;
+    right: -300px;
+    z-index: -1;
+}
+
+.cardBackground {
+    background-color: hsl(185, 75%, 39%);
+    background-image: url(images/bg-pattern-card.svg);
+    height: 13rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+.cardBackground>img {
+    border-radius: 50%;
+    border: solid 6px white;
+    margin-top: 8rem;
+    width: 10rem;
+}
+
+.card {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 2rem;
+    background-color: white;
+    margin: 32rem auto;
+}
+
+header {
+    height: 10rem;
+    margin-top: 2rem;
+    vertical-align: bottom;
+}
+
+header>div {
+    margin-top: 8rem;
+}
+
+.card h1 {
+    color: hsl(229, 23%, 23%);
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.card h1 span {
+    color: hsl(227, 10%, 46%);
+}
+
+.card h2 {
+    color: hsl(227, 10%, 46%);
+    font-weight: 200;
+}
+
+.detailsContainer {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid 2px;
+    border-radius: 0 0 1rem 1rem;
+    border-color: hsl(227, 10%, 46%);
+}
+
+.detailsContainer div {
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    width: 12%;
+    color: hsl(229, 23%, 23%);
+    font-weight: 600;
+}
+
+.detailsContainer div span {
+    font-size: 1rem;
+    color: hsl(227, 10%, 46%);
+    font-weight: 200;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin-left: 20rem;
+    }
+    .card {
+        width: 60rem;
+        height: 40rem;
+        border-radius: 2rem;
+        background-color: white;
+        margin: 32rem auto;
+    }
+    .background div:nth-of-type(1) {
+        position: absolute;
+        top: -200px;
+        left: -300px;
+        z-index: -1;
+    }
+    .background div:nth-of-type(2) {
+        position: absolute;
+        bottom: 200px;
+        right: 300px;
+        z-index: -1;
+    }
 }
